@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Pink English Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="src/logo.png" alt="Pink English Academy Logo" class="logo-image">
+            </div>
+            <div class="header-text">
+                <h1 class="logo-text">Pink English Academy</h1>
+                <p class="subtitle">Учите английский с удовольствием</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section class="card">
+        <h2 class="section-title">
+            <img src="src/book.png" alt="Добавить" class="section-icon">
+            <span>Создать урок</span>
+        </h2>
+        <form id="addLessonForm">
+            <div class="form-group">
+                <label for="lessonTitle" class="input-label">
+                    <img src="src/pen.png" alt="Название" class="input-icon">
+                    <span>Название урока</span>
+                </label>
+                <input type="text" id="lessonTitle" placeholder="Введите название урока" required>
+            </div>
+            <div class="form-group">
+                <label for="lessonDescription" class="input-label">
+                    <img src="src/pen.png" alt="Описание" class="input-icon">
+                    <span>Описание</span>
+                </label>
+                <textarea id="lessonDescription" placeholder="Опишите содержание урока" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <img src="src/plus.png" alt="Добавить" class="btn-icon">
+                <span>Добавить урок</span>
+            </button>
+        </form>
+    </section>
+
+    <section class="card">
+        <div class="section-header">
+            <h2 class="section-title">
+                <img src="src/questionmark.png" alt="Уроки" class="section-icon">
+                <span>Доступные уроки</span>
+            </h2>
+            <button id="loadLessonsBtn" class="btn-icon-only" aria-label="Обновить список уроков">
+                <img src="src/updateicon.png" alt="Обновить" class="icon-large">
+            </button>
+        </div>
+        <div id="lessonsList" class="lessons-grid">
+            <div class="empty-state">
+                <p>Нет доступных уроков. Создайте первый урок выше.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2 class="section-title">
+            <img src="src/heart.png" alt="Избранное" class="section-icon">
+            <span>Избранное</span>
+        </h2>
+        <div id="favoritesList" class="lessons-grid">
+            <div class="empty-state">
+                <p>Нет избранных уроков</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2 class="section-title">
+            <img src="src/telephone.png" alt="Обратная связь" class="section-icon">
+            <span>Обратная связь</span>
+        </h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="userName" class="input-label">
+                    <img src="src/human.png" alt="Имя" class="input-icon">
+                    <span>Ваше имя</span>
+                </label>
+                <input type="text" id="userName" placeholder="Введите ваше имя" required>
+            </div>
+            <div class="form-group">
+                <label for="userMessage" class="input-label">
+                    <img src="src/pen.png" alt="Сообщение" class="input-icon">
+                    <span>Сообщение</span>
+                </label>
+                <textarea id="userMessage" placeholder="Напишите ваше сообщение" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <img src="src/paper.png" alt="Отправить" class="btn-icon">
+                <span>Отправить сообщение</span>
+            </button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Pink English Academy</p>
+    </div>
+</footer>
+
+<div id="notification" class="notification"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
