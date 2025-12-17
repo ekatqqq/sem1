@@ -21,3 +21,7 @@
 #
 
 Технологии: HTML5, CSS3, JavaScript, Fetch API, LocalStorage
+
+#
+
+https://ekatqqq.github.io/sem1/
